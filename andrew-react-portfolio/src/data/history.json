@@ -1,0 +1,36 @@
+[
+    {
+      "role": "Fitwell Attendent",
+      "organisation": "UCR SRC",
+      "startDate": "Jun, 2024",
+      "endDate": "Present",
+      "experiences": [
+        "Gather data for schedule adjustments",
+        "Assist in emergencies with organized responses in time of need", 
+        "Act as an information distributor and conflict manager"
+      ],
+      "imageSrc": "history/ucrsrc.png"
+    },
+    {
+      "role": "Brand Representative",
+      "organisation": "Hollister",
+      "startDate": "Dec, 2023",
+      "endDate": "Sep, 2024",
+      "experiences": [
+        "Utilized problem-solving skills resolving customer inquiries efficiently, ensuring a positive experience",
+        "Managed inventory through monitoring, audits, and optimized ordering to minimize stock issues."
+      ],
+      "imageSrc": "history/hollister.png"
+    },
+    {
+      "role": "AI/ML Research Intern",
+      "organisation": "INRIA",
+      "startDate": "Jun, 2022",
+      "endDate": "Sep, 2022",
+      "experiences": [
+        "Created deep learning model to classify autism-related actions from video clips.", 
+        "Developed Neural Network for image classification using PyTorch"
+      ],
+      "imageSrc": "history/inria.png"
+    }
+  ]

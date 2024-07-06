@@ -1,0 +1,42 @@
+[
+    {
+      "title": "Areomotion Control Fan",
+      "imageSrc": "projects/fan.png",
+      "description": "Built a joystick-operated fan with six speeds and a digital display.",
+      "skills": ["Arduino", "C++"],
+      "demo": "https://youtu.be/GAm5dnw8RwY",
+      "source": "https://github.com/Andrew-Bremond/Aeromotion-Control-Fan"
+    },
+    {
+      "title": "Rubbish Radar",
+      "imageSrc": "projects/rubbishradarhome.png",
+      "description": "Web app that helps users find and contribute to a map of local waste disposal options.",
+      "skills": ["Google Maps API", "Firebase OAuth", "Firestore", "Javascript", "Node", "CSS", "HTML"],
+      "demo": "https://rubbishradar-695ae.web.app/",
+      "source": "https://github.com/Andrew-Bremond/Rubbish-Radar"
+    },
+    {
+      "title": "Stack Game",
+      "imageSrc": "projects/stacker.png",
+      "description": "A LED-based stacker game where players time button presses to hit the middle light, scoring points displayed on a 7-segment screen.",
+      "skills": ["Arduino", "C++"],
+      "demo": "https://youtu.be/pHfLp5gj_KE",
+      "source": "https://github.com/Andrew-Bremond/Stacker-Game"
+    },
+    {
+      "title": "Print LCD",
+      "imageSrc": "projects/printlcd.png",
+      "description": "A program displays user-input strings with 3+ special characters on an LCD, or shows an error.",
+      "skills": ["Arduino", "C++"],
+      "demo": "https://youtu.be/gzW58mXF60I",
+      "source": "https://github.com/Andrew-Bremond/Print-Screen-LCD"
+    },
+    {
+      "title": "Jurassic Park RPG Game",
+      "imageSrc": "projects/jurassic.png",
+      "description": "Developed an interactive Jurassic Park game with choice-driven gameplay and multiple character storylines.",
+      "skills": ["C++", "Google Test", "Valgrind"],
+      "demo": "https://github.com/Andrew-Bremond/Jurassic-Park-Game",
+      "source": "https://github.com/Andrew-Bremond/Jurassic-Park-Game"
+    }
+]

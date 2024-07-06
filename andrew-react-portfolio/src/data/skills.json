@@ -1,0 +1,38 @@
+[
+    {
+      "title": "PyTorch",
+      "imageSrc": "skills/pytorch.png"
+    },
+    {
+      "title": "TensorFlow",
+      "imageSrc": "skills/tensorflow.png"
+    },
+    {
+      "title": "AWS",
+      "imageSrc": "skills/aws.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "skills/react.png"
+    },
+    {
+      "title": "Node",
+      "imageSrc": "skills/node.png"
+    },
+    {
+      "title": "Vue",
+      "imageSrc": "skills/vue.png"
+    },
+    {
+      "title": "Arduino",
+      "imageSrc": "skills/arduino.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "skills/css.png"
+    },
+    {
+        "title": "HTML",
+        "imageSrc": "skills/html.png"
+    }
+  ]
