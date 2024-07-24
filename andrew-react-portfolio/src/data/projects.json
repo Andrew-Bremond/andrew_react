@@ -1,19 +1,27 @@
 [
     {
-      "title": "Areomotion Control Fan",
-      "imageSrc": "projects/fan.png",
-      "description": "Built a joystick-operated fan with six speeds and a digital display.",
-      "skills": ["Arduino", "C++"],
-      "demo": "https://youtu.be/GAm5dnw8RwY",
-      "source": "https://github.com/Andrew-Bremond/Aeromotion-Control-Fan"
-    },
-    {
       "title": "Rubbish Radar",
       "imageSrc": "projects/rubbishradarhome.png",
       "description": "Web app that helps users find and contribute to a map of local waste disposal options.",
       "skills": ["Google Maps API", "Firebase OAuth", "Firestore", "Javascript", "Node", "CSS", "HTML"],
       "demo": "https://rubbishradar-695ae.web.app/",
       "source": "https://github.com/Andrew-Bremond/Rubbish-Radar"
+    },
+    {
+      "title": "Stock Prediction Web App",
+      "imageSrc": "projects/stock.png",
+      "description": "Web app that uses AI and ML to predict stock prices and display them in an interactive graph.",
+      "skills": ["Pandas", "Numpy", "Matplotlib", "Scikit-learn", "Python", "Streamlit", "Yahoo Finance", "Facebook Prophet"],
+      "demo": "https://stock-predictor-web.streamlit.app/",
+      "source": "https://github.com/Andrew-Bremond/stock_predictor_web_app/"
+    },
+    {
+      "title": "Areomotion Control Fan",
+      "imageSrc": "projects/fan.png",
+      "description": "Built a joystick-operated fan with six speeds and a digital display.",
+      "skills": ["Arduino", "C++"],
+      "demo": "https://youtu.be/GAm5dnw8RwY",
+      "source": "https://github.com/Andrew-Bremond/Aeromotion-Control-Fan"
     },
     {
       "title": "Stack Game",
