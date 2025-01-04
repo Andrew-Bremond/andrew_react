@@ -1,11 +1,11 @@
 [
     {
-      "title": "Rubbish Radar",
-      "imageSrc": "projects/rubbishradarhome.png",
-      "description": "Web app that helps users find and contribute to a map of local waste disposal options.",
-      "skills": ["Google Maps API", "Firebase OAuth", "Firestore", "Javascript", "Node", "CSS", "HTML"],
-      "demo": "https://rubbishradar-695ae.web.app/",
-      "source": "https://github.com/Andrew-Bremond/Rubbish-Radar"
+      "title": "ContainerOps System (Dockership)",
+      "imageSrc": "projects/dockership.png",
+      "description": "A containerized system for managing ship loading, balancing, and user authentication with real-time grid visualization.",
+      "skills": ["Python", "Streamlit", "Docker", "MongoDB", "Plotly", "Pytest"],
+      "demo": "https://youtu.be/DtuK8_c5n8o",
+      "source": "https://github.com/jgonz671/Dockership"
     },
     {
       "title": "Stock Prediction Web App",
@@ -14,6 +14,14 @@
       "skills": ["Pandas", "Numpy", "Matplotlib", "Scikit-learn", "Python", "Streamlit", "Yahoo Finance", "Facebook Prophet"],
       "demo": "https://stock-predictor-web.streamlit.app/",
       "source": "https://github.com/Andrew-Bremond/stock_predictor_web_app/"
+    },
+    {
+      "title": "Trash Can Locator (Rubbish Radar)",
+      "imageSrc": "projects/rubbishradarhome.png",
+      "description": "Web app that helps users find and contribute to a map of local waste disposal options.",
+      "skills": ["Google Maps API", "Firebase OAuth", "Firestore", "Javascript", "Node", "CSS", "HTML"],
+      "demo": "https://rubbishradar-695ae.web.app/",
+      "source": "https://github.com/Andrew-Bremond/Rubbish-Radar"
     },
     {
       "title": "Areomotion Control Fan",
