@@ -23,13 +23,19 @@
   margin-top: 48px;
 }
 
-.skills {
+.skillsViewport {
+  width: 100%;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.skillsTrack {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  width: max-content;
   gap: 37px;
-  margin-top: 14px;
-  justify-content: center;
+  align-items: flex-start;
+  animation: scrollSkills 24s linear infinite;
 }
 
 .skill {
@@ -37,6 +43,7 @@
   flex-direction: column;
   align-items: center;
   gap: 11px;
+  flex: 0 0 auto;
 }
 
 .skillImageContainer {
@@ -105,11 +112,20 @@
   margin-left: 17px;
 }
 
+@keyframes scrollSkills {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 18.5px));
+  }
+}
+
 @media screen and (max-width: 830px) {
-  .skills {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+  .skillsTrack {
+    gap: 24px;
+    animation-duration: 18s;
   }
 
   .history {

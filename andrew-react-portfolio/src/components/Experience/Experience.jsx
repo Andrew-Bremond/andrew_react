@@ -36,17 +36,25 @@ export const Experience = () => {
       </div>
       <div className={styles.skillsSection}>
         <h2 className={styles.title}>Skills</h2>
-        <div className={styles.skills}>
-          {skills.map((skill, id) => {
-            return (
-              <div key={id} className={styles.skill}>
-                <div className={styles.skillImageContainer}>
-                  <img src={getImageUrl(skill.imageSrc)} alt={skill.title} />
+        <div className={styles.skillsViewport}>
+          <div className={styles.skillsTrack}>
+            {[...skills, ...skills].map((skill, id) => {
+              const isDuplicate = id >= skills.length;
+
+              return (
+                <div
+                  key={`${skill.title}-${id}`}
+                  className={styles.skill}
+                  aria-hidden={isDuplicate}
+                >
+                  <div className={styles.skillImageContainer}>
+                    <img src={getImageUrl(skill.imageSrc)} alt={isDuplicate ? "" : skill.title} />
+                  </div>
+                  <p>{skill.title}</p>
                 </div>
-                <p>{skill.title}</p>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
