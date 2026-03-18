@@ -16,17 +16,20 @@
 }
 
 .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   margin-top: 14px;
 }
 
+.skillsSection {
+  margin-top: 48px;
+}
+
 .skills {
-  width: 45%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 37px;
+  margin-top: 14px;
+  justify-content: center;
 }
 
 .skill {
@@ -57,7 +60,7 @@
 }
 
 .history {
-  width: 60%; /* original width: 45%; */
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -103,12 +106,6 @@
 }
 
 @media screen and (max-width: 830px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-    gap: 34px;
-  }
-
   .skills {
     width: 100%;
     flex-direction: row;

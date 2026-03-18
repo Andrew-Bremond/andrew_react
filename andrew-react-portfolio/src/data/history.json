@@ -1,5 +1,40 @@
 [
     {
+      "role": "Data Technician",
+      "organisation": "Amazon Robotics | San Francisco, CA",
+      "startDate": "Feb 2026",
+      "endDate": "Present",
+      "experiences": [
+        "Standardized Docker for 100% workflow consistency.",
+        "Reduced collision incidents 15% via SageMaker."
+      ],
+      "imageSrc": "history/amazon.png"
+    },
+    {
+      "role": "AI Consultant (Project Lead)",
+      "organisation": "NeuroSpring | Napa, CA",
+      "startDate": "Mar 2025",
+      "endDate": "Jan 2026",
+      "experiences": [
+        "Led 8 engineers building movement detection.",
+        "Optimized NVIDIA Jetson for real-time inference.",
+        "Built Python video splitter, tripling training samples."
+      ],
+      "imageSrc": "history/neurospring.png"
+    },
+    {
+      "role": "Data Science Intern",
+      "organisation": "Idaho National Laboratory (INL) | Idaho Falls, ID",
+      "startDate": "Jun 2025",
+      "endDate": "Aug 2025",
+      "experiences": [
+        "Built NeuralProphet pipeline, cutting MAPE 79%.",
+        "Engineered scalable AR-Net models for deployment.",
+        "Delivered PyQt6 UI and growth-scaling module."
+      ],
+      "imageSrc": "history/inl.jpg"
+    },
+    {
       "role": "Fitwell Attendent",
       "organisation": "UCR SRC",
       "startDate": "Jun, 2024",
