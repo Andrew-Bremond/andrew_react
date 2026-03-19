@@ -47,7 +47,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className={styles.heroSection} id="about">
+    <section className={styles.heroSection}>
       <section ref={parallaxSceneRef} className={styles.parallaxScene} aria-label="Parallax intro">
         <img
           src={getImageUrl("hero/background.png")}
@@ -79,7 +79,7 @@ export const Hero = () => {
       <div className={styles.aboutSection}>
         <div className={styles.container}>
           <div className={styles.content}>
-            <h1 className={styles.title}>About Me</h1>
+            <h1 className={styles.title} id="about">About Me</h1>
             <p className={styles.description}>
               I am a dedicated computer science student at the University of California, Riverside.
               My passion lies in the dynamic field of software engineering, where I am particularly
