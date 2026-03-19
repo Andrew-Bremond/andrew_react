@@ -72,8 +72,9 @@
 
 .sceneMountain {
     left: 50%;
-    bottom: 6%;
-    width: min(50vw, 44rem);
+    bottom: 0;
+    width: 100vw;
+    max-width: none;
     z-index: 3;
     transform: translate3d(-50%, var(--scene-mountain-offset), 0);
 }
@@ -105,8 +106,8 @@
     }
 
     .sceneMountain {
-        width: 85vw;
-        bottom: 8%;
+        width: 135vw;
+        bottom: 0;
     }
 
     .sceneCloudFront {

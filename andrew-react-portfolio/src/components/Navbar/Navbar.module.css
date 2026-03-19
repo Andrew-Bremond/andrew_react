@@ -6,15 +6,20 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 61px;
+    padding-bottom: 14px;
     z-index: 2px;
     margin: 0 10%;
+    background: linear-gradient(180deg, rgba(232, 242, 255, 0.92) 0%, rgba(206, 224, 255, 0.72) 100%);
+    border-bottom: 1px solid rgba(51, 81, 122, 0.14);
+    border-radius: 0 0 18px 18px;
+    backdrop-filter: blur(10px);
 }
 
 .title {
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-text)
+    color: #33517a
 }
 
 .menuBtn {
@@ -33,7 +38,7 @@
 
 .menuItems a{
     text-decoration: none;
-    color: var(--color-text);
+    color: #33517a;
     font-size: 25px;
     /* font-weight: 500; */
 }
@@ -42,6 +47,9 @@
     .navbar{
         flex-direction: column;
         align-items:flex-start;
+        padding-top: 34px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .menu{
@@ -65,11 +73,11 @@
         align-items: center;
         gap: 13px;
         border-radius: 10px;
-        background: rgb(25, 55, 109);
+        background: rgb(206, 224, 255);
         background: linear-gradient(
             0deg, 
-            rgba(25, 55, 109, 0.2) 0%, 
-            rgba(25, 55, 109, 1) 100%
+            rgba(232, 242, 255, 0.92) 0%, 
+            rgba(183, 205, 237, 0.98) 100%
         );
         padding: 24px 33px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
