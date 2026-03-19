@@ -1,5 +1,95 @@
 @import "../../vars.css";
 
+.heroSection {
+  position: relative;
+}
+
+.parallaxScene {
+  --scene-background-offset: 0px;
+  --scene-title-offset: 0px;
+  --scene-cloud-back-offset: 0px;
+  --scene-mountain-offset: 0px;
+  --scene-cloud-front-offset: 0px;
+  position: relative;
+  min-height: 70rem;
+  height: min(161vh, 94rem);
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(180deg, #e8f2ff 0%, #cee0ff 48%, #9eb9de 100%);
+}
+
+.parallaxScene::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 24%;
+  background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, var(--color-bg) 100%);
+  z-index: 5;
+}
+
+.sceneLayer {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.sceneBackground {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transform: translate3d(0, var(--scene-background-offset), 0) scale(1.03);
+}
+
+.sceneTitle {
+  top: 11%;
+  left: 50%;
+  z-index: 1;
+  margin: 0;
+  color: #33517a;
+  font-family: "Manrope", "Outfit", Arial, Helvetica, sans-serif;
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  text-align: center;
+  text-shadow: 0 22px 45px rgba(26, 66, 111, 0.12);
+  transform: translate3d(-50%, var(--scene-title-offset), 0);
+}
+
+.sceneCloudBack {
+  top: 36%;
+  left: 18%;
+  width: min(24vw, 18rem);
+  z-index: 2;
+  opacity: 0.95;
+  transform: translate3d(0, var(--scene-cloud-back-offset), 0);
+}
+
+.sceneMountain {
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  max-width: none;
+  z-index: 3;
+  transform: translate3d(-50%, var(--scene-mountain-offset), 0);
+}
+
+.sceneCloudFront {
+  right: 17%;
+  bottom: 24%;
+  width: min(30vw, 22rem);
+  z-index: 4;
+  opacity: 0.98;
+  transform: translate3d(0, var(--scene-cloud-front-offset), 0);
+}
+
+.aboutSection {
+  position: relative;
+  z-index: 1;
+}
+
 .container {
   position: relative;
   display: flex;
@@ -9,6 +99,23 @@
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.detailsCard {
+  position: relative;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 15px;
+  padding: 73px;
+  margin-top: 129px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.detailsContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .content {
@@ -101,12 +208,104 @@
   z-index: 0;
 }
 
+.aboutImage {
+  width: 35%;
+  border-radius: 50%;
+}
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  list-style: none;
+  padding: 25px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(165, 215, 232, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+}
+
+.aboutItem:hover {
+  background-size: 100% 100%;
+}
+
+.aboutItem h3 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.aboutItem p {
+  font-size: 25px;
+}
+
 @media screen and (max-width: 830px) {
+  .parallaxScene {
+    min-height: 52rem;
+    height: 132vh;
+  }
+
+  .sceneTitle {
+    top: 16%;
+    width: 90%;
+  }
+
+  .sceneCloudBack {
+    top: 48%;
+    left: 4%;
+    width: 9rem;
+  }
+
+  .sceneMountain {
+    width: 135vw;
+    bottom: 0;
+  }
+
+  .sceneCloudFront {
+    right: -6%;
+    bottom: 28%;
+    width: 12rem;
+  }
+
   .container {
     flex-direction: column-reverse;
   }
 
+  .detailsCard {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .detailsContent {
+    flex-direction: column;
+  }
+
   .content {
     align-items: center;
+  }
+
+  .aboutImage {
+    display: none;
+  }
+
+  .aboutItems {
+    margin-top: 29px;
+  }
+
+  .aboutItem {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
