@@ -12,7 +12,7 @@
     z-index: 2;
     width: 100%;
     margin: 0;
-    background: linear-gradient(180deg, rgba(232, 242, 255, 0.92) 0%, rgba(206, 224, 255, 0.72) 100%);
+    background: #C6DBFF;
     border-bottom: 1px solid rgba(51, 81, 122, 0.14);
     backdrop-filter: blur(10px);
 }
@@ -75,12 +75,7 @@
         align-items: center;
         gap: 13px;
         border-radius: 10px;
-        background: rgb(206, 224, 255);
-        background: linear-gradient(
-            0deg, 
-            rgba(232, 242, 255, 0.92) 0%, 
-            rgba(183, 205, 237, 0.98) 100%
-        );
+        background: #C6DBFF;
         padding: 24px 33px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
     }
