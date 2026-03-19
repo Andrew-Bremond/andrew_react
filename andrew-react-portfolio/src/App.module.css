@@ -14,8 +14,8 @@
     --scene-mountain-offset: 0px;
     --scene-cloud-front-offset: 0px;
     position: relative;
-    min-height: 64rem;
-    height: min(146vh, 85rem);
+    min-height: 70rem;
+    height: min(161vh, 94rem);
     overflow: hidden;
     isolation: isolate;
     background: linear-gradient(180deg, #e8f2ff 0%, #cee0ff 48%, #9eb9de 100%);
@@ -90,8 +90,8 @@
 
 @media screen and (max-width: 830px) {
     .parallaxScene {
-        min-height: 47rem;
-        height: 120vh;
+        min-height: 52rem;
+        height: 132vh;
     }
 
     .sceneTitle {
