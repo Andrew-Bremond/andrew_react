@@ -7,101 +7,111 @@
     overflow: hidden;
 }
 
-.topParallaxZone {
-    --parallax-base-offset: 0px;
-    --parallax-grid-offset: 0px;
-    --parallax-accent-offset: 0px;
-    --parallax-hero-offset: 0px;
+.parallaxScene {
+    --scene-background-offset: 0px;
+    --scene-title-offset: 0px;
+    --scene-cloud-back-offset: 0px;
+    --scene-mountain-offset: 0px;
+    --scene-cloud-front-offset: 0px;
     position: relative;
+    min-height: 43rem;
+    height: min(92vh, 52rem);
     overflow: hidden;
-    padding-bottom: 42px;
     isolation: isolate;
+    background: linear-gradient(180deg, #e8f2ff 0%, #cee0ff 48%, #9eb9de 100%);
 }
 
-.topParallaxContent {
-    position: relative;
-    z-index: 1;
-}
-
-.parallaxBackdrop {
+.parallaxScene::after {
+    content: "";
     position: absolute;
-    inset: 0;
+    inset: auto 0 0 0;
+    height: 24%;
+    background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, var(--color-bg) 100%);
+    z-index: 5;
+}
+
+.sceneLayer {
+    position: absolute;
     pointer-events: none;
-    z-index: 0;
-}
-
-.parallaxLayer {
-    position: absolute;
-    inset: 0;
     will-change: transform;
 }
 
-.parallaxBase {
-    background:
-        radial-gradient(circle at 18% 18%, rgba(82, 180, 255, 0.18), transparent 30%),
-        radial-gradient(circle at 78% 10%, rgba(123, 92, 255, 0.14), transparent 28%),
-        radial-gradient(circle at 50% 44%, rgba(34, 211, 238, 0.08), transparent 36%),
-        linear-gradient(180deg, #07111f 0%, #0a1830 38%, rgba(10, 24, 48, 0.92) 68%, var(--color-bg) 100%);
-    transform: translate3d(0, var(--parallax-base-offset), 0);
-}
-
-.parallaxGrid::before {
-    content: "";
-    position: absolute;
+.sceneBackground {
     inset: 0;
-    background:
-        linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-    background-size: 110px 110px;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 88%);
-    transform: translate3d(0, var(--parallax-grid-offset), 0);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transform: translate3d(0, var(--scene-background-offset), 0) scale(1.03);
 }
 
-.parallaxAccent::before,
-.parallaxAccent::after {
-    content: "";
-    position: absolute;
-    border-radius: 999px;
-    filter: blur(10px);
+.sceneTitle {
+    top: 11%;
+    left: 50%;
+    z-index: 1;
+    margin: 0;
+    color: #33517a;
+    font-family: "Manrope", "Outfit", Arial, Helvetica, sans-serif;
+    font-size: clamp(4rem, 10vw, 12rem);
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    line-height: 0.9;
+    text-align: center;
+    text-shadow: 0 22px 45px rgba(26, 66, 111, 0.12);
+    transform: translate3d(-50%, var(--scene-title-offset), 0);
 }
 
-.parallaxAccent::before {
-    width: 34rem;
-    height: 34rem;
-    top: 5rem;
-    right: -10rem;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.26), rgba(56, 189, 248, 0));
-    transform: translate3d(0, var(--parallax-accent-offset), 0);
+.sceneCloudBack {
+    top: 36%;
+    left: 18%;
+    width: min(24vw, 18rem);
+    z-index: 2;
+    opacity: 0.95;
+    transform: translate3d(0, var(--scene-cloud-back-offset), 0);
 }
 
-.parallaxAccent::after {
-    width: 28rem;
-    height: 28rem;
-    top: 24rem;
-    left: -8rem;
-    background: radial-gradient(circle, rgba(96, 165, 250, 0.18), rgba(96, 165, 250, 0));
-    transform: translate3d(0, calc(var(--parallax-accent-offset) * 0.7), 0);
+.sceneMountain {
+    left: 50%;
+    bottom: 6%;
+    width: min(50vw, 44rem);
+    z-index: 3;
+    transform: translate3d(-50%, var(--scene-mountain-offset), 0);
+}
+
+.sceneCloudFront {
+    right: 17%;
+    bottom: 24%;
+    width: min(30vw, 22rem);
+    z-index: 4;
+    opacity: 0.98;
+    transform: translate3d(0, var(--scene-cloud-front-offset), 0);
 }
 
 @media screen and (max-width: 830px) {
-    .topParallaxZone {
-        padding-bottom: 16px;
+    .parallaxScene {
+        min-height: 30rem;
+        height: 72vh;
     }
 
-    .parallaxGrid::before {
-        background-size: 72px 72px;
+    .sceneTitle {
+        top: 16%;
+        width: 90%;
     }
 
-    .parallaxAccent::before {
-        width: 18rem;
-        height: 18rem;
-        right: -6rem;
+    .sceneCloudBack {
+        top: 48%;
+        left: 4%;
+        width: 9rem;
     }
 
-    .parallaxAccent::after {
-        width: 16rem;
-        height: 16rem;
-        left: -5rem;
-        top: 20rem;
+    .sceneMountain {
+        width: 85vw;
+        bottom: 8%;
+    }
+
+    .sceneCloudFront {
+        right: -6%;
+        bottom: 28%;
+        width: 12rem;
     }
 }

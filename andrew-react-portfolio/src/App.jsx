@@ -6,26 +6,28 @@ import { About } from './components/About/About'
 import { Experience } from './components/Experience/Experience'
 import { Projects } from './components/Projects/Projects'
 import { Contact } from './components/Contact/Contact'
+import { getImageUrl } from './utils'
 
 function App() {
-  const parallaxZoneRef = useRef(null)
+  const parallaxSceneRef = useRef(null)
 
   useEffect(() => {
-    const zone = parallaxZoneRef.current
+    const scene = parallaxSceneRef.current
 
-    if (!zone) {
+    if (!scene) {
       return undefined
     }
 
     let animationFrame = 0
 
     const updateParallax = () => {
-      const scrollOffset = Math.min(window.scrollY, 560)
+      const scrollOffset = Math.min(window.scrollY, 420)
 
-      zone.style.setProperty('--parallax-base-offset', `${scrollOffset * -0.12}px`)
-      zone.style.setProperty('--parallax-grid-offset', `${scrollOffset * -0.2}px`)
-      zone.style.setProperty('--parallax-accent-offset', `${scrollOffset * -0.32}px`)
-      zone.style.setProperty('--parallax-hero-offset', `${scrollOffset * -0.08}px`)
+      scene.style.setProperty('--scene-background-offset', `${scrollOffset * -0.12}px`)
+      scene.style.setProperty('--scene-title-offset', `${scrollOffset * -0.18}px`)
+      scene.style.setProperty('--scene-cloud-back-offset', `${scrollOffset * -0.28}px`)
+      scene.style.setProperty('--scene-mountain-offset', `${scrollOffset * -0.08}px`)
+      scene.style.setProperty('--scene-cloud-front-offset', `${scrollOffset * -0.36}px`)
       animationFrame = 0
     }
 
@@ -52,17 +54,35 @@ function App() {
   return (
     <div className={styles.App}>
       <Navbar />
-      <div ref={parallaxZoneRef} className={styles.topParallaxZone}>
-        <div className={styles.parallaxBackdrop}>
-          <div className={`${styles.parallaxLayer} ${styles.parallaxBase}`} />
-          <div className={`${styles.parallaxLayer} ${styles.parallaxGrid}`} />
-          <div className={`${styles.parallaxLayer} ${styles.parallaxAccent}`} />
-        </div>
-        <div className={styles.topParallaxContent}>
-          <Hero />
-          <About />
-        </div>
-      </div>
+      <section ref={parallaxSceneRef} className={styles.parallaxScene} aria-label="Parallax intro">
+        <img
+          src={getImageUrl('history/background.png')}
+          alt=""
+          aria-hidden="true"
+          className={`${styles.sceneLayer} ${styles.sceneBackground}`}
+        />
+        <h1 className={`${styles.sceneLayer} ${styles.sceneTitle}`}>Andrew Bremond</h1>
+        <img
+          src={getImageUrl('history/cloud_1.png')}
+          alt=""
+          aria-hidden="true"
+          className={`${styles.sceneLayer} ${styles.sceneCloudBack}`}
+        />
+        <img
+          src={getImageUrl('history/mountain.png')}
+          alt=""
+          aria-hidden="true"
+          className={`${styles.sceneLayer} ${styles.sceneMountain}`}
+        />
+        <img
+          src={getImageUrl('history/cloud_2.png')}
+          alt=""
+          aria-hidden="true"
+          className={`${styles.sceneLayer} ${styles.sceneCloudFront}`}
+        />
+      </section>
+      <Hero />
+      <About />
       <Experience />
       <Projects />
       <Contact />
