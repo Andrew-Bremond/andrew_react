@@ -13,7 +13,7 @@
     width: 100%;
     margin: 0;
     background: #C6DBFF;
-    border-bottom: 1px solid rgba(51, 81, 122, 0.14);
+    /* border-bottom: 1px solid rgba(51, 81, 122, 0.14); */
     backdrop-filter: blur(10px);
 }
 
