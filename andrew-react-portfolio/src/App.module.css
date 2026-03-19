@@ -10,7 +10,6 @@
 .parallaxScene {
     --scene-background-offset: 0px;
     --scene-title-offset: 0px;
-    --scene-title-opacity: 1;
     --scene-cloud-back-offset: 0px;
     --scene-mountain-offset: 0px;
     --scene-cloud-front-offset: 0px;
@@ -59,7 +58,6 @@
     line-height: 0.9;
     text-align: center;
     text-shadow: 0 22px 45px rgba(26, 66, 111, 0.12);
-    opacity: var(--scene-title-opacity);
     transform: translate3d(-50%, var(--scene-title-offset), 0);
 }
 
