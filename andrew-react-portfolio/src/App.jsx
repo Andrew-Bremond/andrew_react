@@ -24,10 +24,10 @@ function App() {
       const scrollOffset = Math.min(window.scrollY, 420)
 
       scene.style.setProperty('--scene-background-offset', `${scrollOffset * -0.12}px`)
-      scene.style.setProperty('--scene-title-offset', `${scrollOffset * -0.18}px`)
-      scene.style.setProperty('--scene-cloud-back-offset', `${scrollOffset * -0.28}px`)
+      scene.style.setProperty('--scene-title-offset', `${scrollOffset * -0.06}px`)
+      scene.style.setProperty('--scene-cloud-back-offset', `${scrollOffset * -0.14}px`)
       scene.style.setProperty('--scene-mountain-offset', `${scrollOffset * -0.08}px`)
-      scene.style.setProperty('--scene-cloud-front-offset', `${scrollOffset * -0.36}px`)
+      scene.style.setProperty('--scene-cloud-front-offset', `${scrollOffset * -0.18}px`)
       animationFrame = 0
     }
 
