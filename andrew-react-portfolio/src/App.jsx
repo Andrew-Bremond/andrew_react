@@ -22,13 +22,13 @@ function App() {
 
     const updateParallax = () => {
       const scrollOffset = Math.min(window.scrollY, 1520)
-      const cloudScrollOffset = Math.min(window.scrollY, 3040)
+      const cloudScrollOffset = Math.min(window.scrollY, 6080)
 
       scene.style.setProperty('--scene-background-offset', `${scrollOffset * -0.12}px`)
       scene.style.setProperty('--scene-title-offset', `${scrollOffset * 0.48}px`)
-      scene.style.setProperty('--scene-cloud-back-offset', `${cloudScrollOffset * -0.24}px`)
+      scene.style.setProperty('--scene-cloud-back-offset', `${cloudScrollOffset * -0.48}px`)
       scene.style.setProperty('--scene-mountain-offset', `${scrollOffset * -0.2}px`)
-      scene.style.setProperty('--scene-cloud-front-offset', `${cloudScrollOffset * -0.36}px`)
+      scene.style.setProperty('--scene-cloud-front-offset', `${cloudScrollOffset * -0.72}px`)
       animationFrame = 0
     }
 
