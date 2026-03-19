@@ -6,3 +6,102 @@
     height: 100%;
     overflow: hidden;
 }
+
+.topParallaxZone {
+    --parallax-base-offset: 0px;
+    --parallax-grid-offset: 0px;
+    --parallax-accent-offset: 0px;
+    --parallax-hero-offset: 0px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 42px;
+    isolation: isolate;
+}
+
+.topParallaxContent {
+    position: relative;
+    z-index: 1;
+}
+
+.parallaxBackdrop {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.parallaxLayer {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+}
+
+.parallaxBase {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(82, 180, 255, 0.18), transparent 30%),
+        radial-gradient(circle at 78% 10%, rgba(123, 92, 255, 0.14), transparent 28%),
+        radial-gradient(circle at 50% 44%, rgba(34, 211, 238, 0.08), transparent 36%),
+        linear-gradient(180deg, #07111f 0%, #0a1830 38%, rgba(10, 24, 48, 0.92) 68%, var(--color-bg) 100%);
+    transform: translate3d(0, var(--parallax-base-offset), 0);
+}
+
+.parallaxGrid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 110px 110px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 88%);
+    transform: translate3d(0, var(--parallax-grid-offset), 0);
+}
+
+.parallaxAccent::before,
+.parallaxAccent::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(10px);
+}
+
+.parallaxAccent::before {
+    width: 34rem;
+    height: 34rem;
+    top: 5rem;
+    right: -10rem;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.26), rgba(56, 189, 248, 0));
+    transform: translate3d(0, var(--parallax-accent-offset), 0);
+}
+
+.parallaxAccent::after {
+    width: 28rem;
+    height: 28rem;
+    top: 24rem;
+    left: -8rem;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.18), rgba(96, 165, 250, 0));
+    transform: translate3d(0, calc(var(--parallax-accent-offset) * 0.7), 0);
+}
+
+@media screen and (max-width: 830px) {
+    .topParallaxZone {
+        padding-bottom: 16px;
+    }
+
+    .parallaxGrid::before {
+        background-size: 72px 72px;
+    }
+
+    .parallaxAccent::before {
+        width: 18rem;
+        height: 18rem;
+        right: -6rem;
+    }
+
+    .parallaxAccent::after {
+        width: 16rem;
+        height: 16rem;
+        left: -5rem;
+        top: 20rem;
+    }
+}

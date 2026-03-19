@@ -63,13 +63,13 @@
 
 @keyframes floating {
   0% {
-    transform: translate(0, 0px);
+    transform: translate3d(0, var(--parallax-hero-offset, 0px), 0);
   }
   50% {
-    transform: translate(0, 10px);
+    transform: translate3d(0, calc(var(--parallax-hero-offset, 0px) + 10px), 0);
   }
   100% {
-    transform: translate(0, -0px);
+    transform: translate3d(0, var(--parallax-hero-offset, 0px), 0);
   }
 }
 
@@ -104,9 +104,16 @@
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    margin-top: 36px;
   }
 
   .content {
     align-items: center;
+    text-align: center;
+  }
+
+  .heroImg {
+    width: min(72%, 320px);
+    margin-bottom: 24px;
   }
 }
