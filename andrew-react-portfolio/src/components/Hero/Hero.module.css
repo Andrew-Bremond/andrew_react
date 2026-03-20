@@ -47,7 +47,7 @@
   font-family: "Manrope", "Outfit", Arial, Helvetica, sans-serif;
   font-size: clamp(4rem, 10vw, 12rem);
   font-weight: 800;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
   line-height: 0.9;
   text-align: center;
   text-shadow: 0 22px 45px rgba(26, 66, 111, 0.12);
